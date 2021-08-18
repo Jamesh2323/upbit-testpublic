@@ -20,7 +20,7 @@ def get_start_time(ticker):
 def get_ma3(ticker):
     """3일 이동 평균선 조회"""
     df = pyupbit.get_ohlcv(ticker, interval="day", count=3)
-    ma03 = df['close'].rolling(3).mean().iloc[-1]
+    ma3 = df['close'].rolling(3).mean().iloc[-1]
     return ma3
 
 def get_ma5(ticker):

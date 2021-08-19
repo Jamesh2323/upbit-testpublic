@@ -32,8 +32,8 @@ def get_ma5(ticker):
 def get_ma10(ticker):
     """10일 이동 평균선 조회"""
     df = pyupbit.get_ohlcv(ticker, interval="day", count=10)
-    ma15 = df['close'].rolling(10).mean().iloc[-1]
-    return ma15
+    ma10 = df['close'].rolling(10).mean().iloc[-1]
+    return ma10
 
 def get_ma15(ticker):
     """15일 이동 평균선 조회"""
